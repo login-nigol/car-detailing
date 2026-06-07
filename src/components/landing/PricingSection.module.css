@@ -1,0 +1,207 @@
+/* ===================== PRICING SECTION ===================== */
+/* Компонент: PricingSection.jsx */
+
+/* Фон секции — поверхность */
+.pricing {
+  padding: 5em 0;
+  background-color: var(--clr-surface);
+}
+
+/* ===================== КОНТЕЙНЕР ===================== */
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* ===================== ЗАГОЛОВОК СЕКЦИИ ===================== */
+.sectionTitle {
+  font-size: clamp(1.75em, 4vw, 3em);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Золотой акцент в заголовке */
+.accent {
+  color: var(--clr-accent);
+}
+
+/* ===================== ПОДЗАГОЛОВОК ===================== */
+.sectionSubtitle {
+  font-size: 1.2em;
+  color: var(--clr-muted);
+  text-align: center;
+  max-width: 36em;
+  margin: 0 auto 3em;
+  line-height: 1.8;
+}
+
+/* ===================== СЕТКА ТАРИФОВ ===================== */
+/* 3 колонки на десктопе, 1 на мобилке */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  gap: 1.5em;
+  align-items: start;
+}
+
+/* ===================== КАРТОЧКА ТАРИФА ===================== */
+.card {
+  background-color: var(--clr-surface-2);
+  border: 0.05em solid var(--clr-border);
+  border-radius: var(--radius-card);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  position: relative;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--clr-accent);
+  transform: translateY(-0.3em);
+}
+
+/* Популярный план — золотая рамка и чуть крупнее */
+.popular {
+  border-color: var(--clr-accent);
+  transform: scale(1.03);
+}
+
+.popular:hover {
+  transform: scale(1.03) translateY(-0.3em);
+}
+
+/* ===================== БЕЙДЖ ПОПУЛЯРНОГО ===================== */
+.popularBadge {
+  position: absolute;
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-accent);
+  color: #000;
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  white-space: nowrap;
+}
+
+/* ===================== ШАПКА КАРТОЧКИ ===================== */
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+/* Название пакета */
+.planName {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+/* Описание пакета */
+.planDescription {
+  font-size: 0.9em;
+  color: var(--clr-muted);
+}
+
+/* ===================== ЦЕНА ===================== */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3em;
+  margin-top: 0.5em;
+}
+
+/* Приставка "ab" перед ценой */
+.priceDuration {
+  font-size: 0.9em;
+  color: var(--clr-muted);
+}
+
+/* Сама цена — крупная */
+.price {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--clr-accent);
+}
+
+/* ===================== РАЗДЕЛИТЕЛЬ ===================== */
+.divider {
+  height: 0.05em;
+  background-color: var(--clr-border);
+}
+
+/* ===================== СПИСОК УСЛУГ ===================== */
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  flex: 1;
+}
+
+/* Один пункт списка */
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-size: 0.95em;
+  color: var(--clr-muted);
+}
+
+/* Галочка перед пунктом */
+.check {
+  color: var(--clr-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ===================== КНОПКИ ===================== */
+.btn {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.3em;
+  border-radius: var(--radius-btn);
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+/* Золотая кнопка для популярного плана */
+.btnPrimary {
+  background-color: var(--clr-accent);
+  color: #000;
+}
+
+.btnPrimary:hover {
+  background-color: var(--clr-accent-dark);
+}
+
+/* Прозрачная кнопка для остальных */
+.btnSecondary {
+  border: 0.05em solid var(--clr-accent);
+  color: var(--clr-text);
+}
+
+.btnSecondary:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* ===================== АДАПТИВ ===================== */
+@media (max-width: 48em) {
+  /* На мобилке отменяем scale у популярного */
+  .popular {
+    transform: scale(1);
+  }
+
+  .popular:hover {
+    transform: translateY(-0.3em);
+  }
+}
