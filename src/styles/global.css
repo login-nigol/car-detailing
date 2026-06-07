@@ -1,0 +1,53 @@
+/* ===================== RESET ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== ROOT ПЕРЕМЕННЫЕ ===================== */
+:root {
+  --clr-bg:          #0A0A0A;
+  --clr-surface:     #141414;
+  --clr-surface-2:   #1E1E1E;
+  --clr-accent:      #C9A84C;
+  --clr-accent-dark: #A68A35;
+  --clr-text:        #FFFFFF;
+  --clr-muted:       #A0A0A0;
+  --clr-border:      #2A2A2A;
+
+  --radius-card: 0.75em;
+  --radius-btn:  0.4em;
+  --transition:  0.5s;
+}
+
+/* ===================== BASE ===================== */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
