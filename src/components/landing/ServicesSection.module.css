@@ -1,0 +1,86 @@
+/* ===================== SERVICES SECTION ===================== */
+/* Компонент: ServicesSection.jsx */
+
+/* Секция с тёмным фоном поверхности */
+.services {
+  padding: 5em 0;
+  background-color: var(--clr-surface);
+}
+
+/* ===================== КОНТЕЙНЕР ===================== */
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* ===================== ЗАГОЛОВОК СЕКЦИИ ===================== */
+.sectionTitle {
+  font-size: clamp(1.75em, 4vw, 3em);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Золотой акцент в заголовке */
+.accent {
+  color: var(--clr-accent);
+}
+
+/* ===================== ПОДЗАГОЛОВОК ===================== */
+.sectionSubtitle {
+  font-size: 1.2em;
+  color: var(--clr-muted);
+  text-align: center;
+  max-width: 36em;
+  margin: 0 auto 3em;
+  line-height: 1.8;
+}
+
+/* ===================== СЕТКА КАРТОЧЕК ===================== */
+/* 4 колонки на десктопе, адаптируется на мобилке */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  gap: 1.5em;
+}
+
+/* ===================== КАРТОЧКА УСЛУГИ ===================== */
+.card {
+  background-color: var(--clr-surface-2);
+  border: 0.05em solid var(--clr-border);
+  border-radius: var(--radius-card);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  transition: var(--transition);
+}
+
+/* Hover — поднимаем карточку и подсвечиваем границу */
+.card:hover {
+  border-color: var(--clr-accent);
+  transform: translateY(-0.3em);
+}
+
+/* ===================== ИКОНКА ===================== */
+.cardIcon {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+/* ===================== НАЗВАНИЕ УСЛУГИ ===================== */
+.cardTitle {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+/* ===================== ОПИСАНИЕ УСЛУГИ ===================== */
+.cardDescription {
+  font-size: 1.2em;
+  color: var(--clr-muted);
+  line-height: 1.8;
+}
