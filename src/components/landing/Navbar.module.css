@@ -1,0 +1,129 @@
+/* ===================== NAVBAR ===================== */
+/* Фиксированная навигация поверх страницы */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.2em 0;
+  transition: var(--transition);
+}
+
+/* Фон появляется после скролла */
+.scrolled {
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(0.5em);
+  border-bottom: 0.05em solid var(--clr-border);
+}
+
+/* ===================== КОНТЕЙНЕР ===================== */
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===================== ЛОГОТИП ===================== */
+.logo {
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.accent {
+  color: var(--clr-accent);
+}
+
+/* ===================== ДЕСКТОПНОЕ МЕНЮ ===================== */
+.nav {
+  display: flex;
+  gap: 2em;
+}
+
+.navLink {
+  font-size: 0.9em;
+  color: var(--clr-muted);
+  transition: var(--transition);
+  letter-spacing: 0.03em;
+}
+
+.navLink:hover {
+  color: var(--clr-text);
+}
+
+/* ===================== CTA КНОПКА ===================== */
+.cta {
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 0.6em 1.4em;
+  border-radius: var(--radius-btn);
+  background-color: var(--clr-accent);
+  color: #000;
+  transition: var(--transition);
+}
+
+.cta:hover {
+  background-color: var(--clr-accent-dark);
+}
+
+/* ===================== БУРГЕР ===================== */
+/* Показываем только на мобилке */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 0.3em;
+}
+
+.burgerLine {
+  display: block;
+  width: 1.5em;
+  height: 0.1em;
+  background-color: var(--clr-text);
+  transition: var(--transition);
+}
+
+/* ===================== МОБИЛЬНОЕ МЕНЮ ===================== */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.5em 1.5em;
+  gap: 0.5em;
+  background-color: rgba(10, 10, 10, 0.98);
+  border-top: 0.05em solid var(--clr-border);
+}
+
+.mobileLink {
+  font-size: 1em;
+  color: var(--clr-muted);
+  padding: 0.6em 0;
+  border-bottom: 0.05em solid var(--clr-border);
+  transition: var(--transition);
+}
+
+.mobileLink:hover {
+  color: var(--clr-text);
+}
+
+.mobileCta {
+  margin-top: 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.8em;
+  border-radius: var(--radius-btn);
+  background-color: var(--clr-accent);
+  color: #000;
+  text-align: center;
+  transition: var(--transition);
+}
+
+/* ===================== АДАПТИВ ===================== */
+@media (max-width: 48em) {
+  .nav  { display: none; }
+  .cta  { display: none; }
+  .burger { display: flex; }
+}
