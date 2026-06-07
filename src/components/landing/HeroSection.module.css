@@ -1,0 +1,147 @@
+/* ===================== HERO SECTION ===================== */
+/* Компонент: HeroSection.jsx */
+
+/* Секция на всю высоту экрана */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8em 1.5em 5em;
+  /* Тонкий градиент снизу для плавного перехода к следующей секции */
+  background: linear-gradient(
+    to bottom,
+    var(--clr-bg) 60%,
+    var(--clr-surface) 100%
+  );
+}
+
+/* ===================== КОНТЕЙНЕР ===================== */
+.container {
+  max-width: 50em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+/* ===================== BADGE ===================== */
+/* Лейбл над заголовком */
+.badge {
+  font-size: 0.85em;
+  color: var(--clr-accent);
+  border: 0.05em solid var(--clr-accent);
+  border-radius: 2em;
+  padding: 0.4em 1.2em;
+  letter-spacing: 0.03em;
+}
+
+/* ===================== ЗАГОЛОВОК ===================== */
+.title {
+  font-size: clamp(2.5em, 6vw, 5em);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Золотой акцент в заголовке */
+.accent {
+  color: var(--clr-accent);
+}
+
+/* ===================== ПОДЗАГОЛОВОК ===================== */
+.subtitle {
+  font-size: clamp(1em, 2vw, 1.2em);
+  color: var(--clr-muted);
+  max-width: 36em;
+  line-height: 1.8;
+}
+
+/* ===================== КНОПКИ ===================== */
+.buttons {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+/* Главная кнопка — золотая */
+.btnPrimary {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.9em 2em;
+  border-radius: var(--radius-btn);
+  background-color: var(--clr-accent);
+  color: #000;
+  transition: var(--transition);
+}
+
+.btnPrimary:hover {
+  background-color: var(--clr-accent-dark);
+}
+
+/* Вторичная кнопка — прозрачная с рамкой */
+.btnSecondary {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.9em 2em;
+  border-radius: var(--radius-btn);
+  border: 0.05em solid var(--clr-border);
+  color: var(--clr-text);
+  transition: var(--transition);
+}
+
+.btnSecondary:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* ===================== СТАТИСТИКА ===================== */
+/* Строка с цифрами для доверия */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Один блок статистики */
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+
+/* Цифра */
+.statNumber {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--clr-accent);
+}
+
+/* Подпись под цифрой */
+.statLabel {
+  font-size: 0.8em;
+  color: var(--clr-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Вертикальный разделитель между статами */
+.statDivider {
+  width: 0.05em;
+  height: 3em;
+  background-color: var(--clr-border);
+}
+
+/* ===================== АДАПТИВ ===================== */
+@media (max-width: 48em) {
+  /* На мобилке скрываем разделители — статы переносятся */
+  .statDivider {
+    display: none;
+  }
+}
